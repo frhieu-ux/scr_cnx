@@ -182,16 +182,7 @@ Deno.serve(async (req) => {
     };
 
     // Debug top-3 internals (visible in Edge Function logs)
-    console.log(
-      merged.slice(0, 3).map((r) => ({
-        book: r.book,
-        rank: r.rank,
-        dist: r.dist,
-        _fts: r._fts,
-        _vec: r._vec,
-        score: r.score,
-      })),
-    );
+
 
     return Response.json(payload);
   } catch (e) {
